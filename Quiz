@@ -1,0 +1,66 @@
+import java.util.*;
+
+public class quiz {
+
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\n-------> Welcome To The Quiz <-------\n");
+        System.out.println("Enter Your Name");
+        String name = sc.nextLine();
+        System.out.println("Enter Your Enrollment no.");
+        String Enroll = sc.nextLine();
+        String q1 = " Who invented Java Programming?\n"
+                + "(a)Guido van Rossum \n (b)James Gosling \n (c)Dennis Ritchie \n (d)Bjarne Stroustrup\n";
+        String q2 = " Which component is used to compile, debug and execute the java programs?\n"
+                + "(a)JRE \n (b)JIT \n (c)JDK \n (d) JDK\n";
+        String q3 = " Which one of the following is not a Java feature?\n"
+                + "(a)Object-oriented \n (b)Use of pointers \n (c)Portable \n (d) Dynamic and Extensible?\n";
+        String q4 = " Which one of the following is not a Java feature?\n"
+                + "(a)Object-oriented \n (b)Use of pointers \n (c)Portable \n (d) Dynamic and Extensible?\n";
+        String q5 = " Which component is used to compile, debug and execute the java programs?\n"
+                + "(a)JRE \n (b)JIT \n (c)JDK \n (d) JDK\n";
+        String q6 = " Which component is used to compile, debug and execute the java programs?\n"
+                + "(a)JRE \n (b)JIT \n (c)JDK \n (d) JDK\n";
+        String q7 = " Which component is used to compile, debug and execute the java programs?\n"
+                + "(a)JRE \n (b)JIT \n (c)JDK \n (d) JDK\n";
+        String q8 = " Which component is used to compile, debug and execute the java programs?\n"
+                + "(a)JRE \n (b)JIT \n (c)JDK \n (d) JDK\n";
+        String q9 = " Which component is used to compile, debug and execute the java programs?\n"
+                + "(a)JRE \n (b)JIT \n (c)JDK \n (d) JDK\n";
+        String q10 = " Which component is used to compile, debug and execute the java programs?\n"
+                + "(a)JRE \n (b)JIT \n (c)JDK \n (d) JDK\n";
+        Question [] questions =
+                {
+                new Question(q1,"b"),
+                new Question(q2,"c"),
+                        new Question(q3,"b"),
+                        new Question(q4,"b"),
+                        new Question(q5,"c"),
+                        new Question(q6,"c"),
+                        new Question(q7,"c"),
+                        new Question(q8,"c"),
+                        new Question(q9,"c"),
+                        new Question(q10,"c")
+
+        };
+        takeTest(questions);
+    }
+    public static void takeTest(Question [] questions)
+        {
+            int a=1;
+            int score = 0;
+            Scanner sc = new Scanner(System.in);
+            for(int i=0;i<questions.length;i++)
+            {
+                System.out.println(questions[i].prompt);
+                String answer = sc.nextLine();
+                if(answer.equals(questions[i].answer))
+                {
+                    score++;
+                }
+            }
+            System.out.println("You got" +score + "/" + questions.length);
+        }
+    }
+
